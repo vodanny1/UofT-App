@@ -23,12 +23,10 @@ class CourseViewController: UIViewController, UISearchBarDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
-        //searchBar.text = "csc108"
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
