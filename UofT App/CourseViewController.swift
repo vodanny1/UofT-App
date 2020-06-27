@@ -38,7 +38,7 @@ class CourseViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let courseCode = searchBar.text else { return }
         
-        let url = "https://nikel.ml/api/courses?code=" + courseCode //+ "&limit=1"
+        let url = "https://nikel.ml/api/courses?id=" + courseCode //+ "&limit=1"
         getData(from: url)
     }
     
