@@ -7,42 +7,30 @@
 //
 
 import UIKit
-
-class CourseViewController: UIViewController, UISearchBarDelegate {
+//UISearchBarDelegate
+class CourseViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var courses = [CourseResult]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let searchBar = UISearchBar()
-        searchBar.placeholder = "Search Course ID"
-        searchBar.sizeToFit()
-        searchBar.delegate = self
-        //navigationItem.largeTitleDisplayMode = .always
-        navigationItem.titleView = searchBar
+        title = "Courses"
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        definesPresentationContext = true
+        searchController.searchBar.placeholder = "Search Course ID"
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        navigationItem.searchController = searchController
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInsetAdjustmentBehavior = .never
     }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        searchBar.showsCancelButton = false
-        searchBar.endEditing(true)
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let courseCode = searchBar.text else { return }
-        
-        let url = "https://nikel.ml/api/courses?id=" + courseCode //+ "&limit=1"
-        getData(from: url)
-    }
-    
     
     func getData(from url: String) {
         let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
@@ -66,7 +54,21 @@ class CourseViewController: UIViewController, UISearchBarDelegate {
         })
         task.resume()
     }
+    
+}
 
+extension CourseViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        if searchBar.text!.count > 0 {
+            let url = "https://nikel.ml/api/courses?id=" + searchBar.text! //+ "&limit=1"
+            getData(from: url)
+        } else {
+            courses.removeAll()
+            tableView.reloadData()
+        }
+    }
 }
 
 extension CourseViewController: UITableViewDelegate {
