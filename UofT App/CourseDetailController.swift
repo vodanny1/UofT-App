@@ -17,7 +17,7 @@ class CourseDetailController: UIViewController {
         super.viewDidLoad()
 
         title = course.code
-        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.delegate = self
         tableView.dataSource = self
