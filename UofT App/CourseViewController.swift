@@ -64,9 +64,6 @@ extension CourseViewController: UISearchResultsUpdating {
         if searchBar.text!.count > 0 {
             let url = "https://nikel.ml/api/courses?id=" + searchBar.text! //+ "&limit=1"
             getData(from: url)
-        } else {
-            courses.removeAll()
-            tableView.reloadData()
         }
     }
 }
