@@ -38,9 +38,9 @@ class CourseViewController: UIViewController {
                 print("Something went wrong.")
                 return
             }
-            var result: Response?
+            var result: CourseResponse?
             do {
-                result = try JSONDecoder().decode(Response.self, from: data)
+                result = try JSONDecoder().decode(CourseResponse.self, from: data)
             } catch {
                 debugPrint(error)
             }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Response: Codable {
+struct CourseResponse: Codable {
     let response: [CourseResult]
     let status_code: Int
     let status_message: String
