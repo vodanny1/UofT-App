@@ -53,8 +53,6 @@ class BuildingsViewController: UIViewController, UISearchBarDelegate {
         })
         task.resume()
     }
-    
-
 }
 
 extension BuildingsViewController: UISearchResultsUpdating {

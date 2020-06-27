@@ -61,6 +61,7 @@ class CourseDetailController: UIViewController {
         while index < course.meeting_sections.count {
             var courseDate = [String]()
             courseDate.append("Section: " + course.meeting_sections[index].code.uppercased())
+
             if !(course.meeting_sections[index].times.isEmpty) {
                 if (course.meeting_sections[index].times[0].day != nil) {
                     courseDate.append("Day: " + course.meeting_sections[index].times[0].day!.capitalized)
