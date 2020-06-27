@@ -19,6 +19,7 @@ class CourseViewController: UIViewController, UISearchBarDelegate {
         searchBar.placeholder = "Search Course ID"
         searchBar.sizeToFit()
         searchBar.delegate = self
+        //navigationItem.largeTitleDisplayMode = .always
         navigationItem.titleView = searchBar
         
         tableView.delegate = self
