@@ -110,10 +110,6 @@ class CourseDetailController: UIViewController {
 }
 
 extension CourseDetailController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    }
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "Class Description"
@@ -125,7 +121,6 @@ extension CourseDetailController: UITableViewDelegate {
 
 extension CourseDetailController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(course.meeting_sections.count)
         return total[section].count
     }
     
