@@ -42,7 +42,6 @@ class CourseViewController: UIViewController {
             do {
                 result = try JSONDecoder().decode(Response.self, from: data)
             } catch {
-                //print("failed to convert \(error.localizedDescription)")
                 debugPrint(error)
             }
             
@@ -54,7 +53,6 @@ class CourseViewController: UIViewController {
         })
         task.resume()
     }
-    
 }
 
 extension CourseViewController: UISearchResultsUpdating {
