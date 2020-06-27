@@ -2,7 +2,7 @@
 
 ### API
 
-Built using the free API from www.nikel.ml
+Built using the free API from https://docs.nikel.ml
 
 ### Information
 
