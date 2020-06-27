@@ -11,8 +11,8 @@ import UIKit
 class CourseDetailController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var course: CourseResult!
-    var detail = [String]()
-    var total = [[String]]()
+    var detail = [String]() // array containing all the information for courses
+    var total = [[String]]() // array containg both the DETAIL and the DATE/ Time
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class CourseDetailController: UIViewController {
             var courseDate = [String]()
             courseDate.append("Section: " + course.meeting_sections[index].code.uppercased())
             
-            if (course.meeting_sections[index].times[0].day != nil){
+            if (course.meeting_sections[index].times[0].day != nil) {
                 courseDate.append("Day: " + course.meeting_sections[index].times[0].day!.capitalized)
             } else {
                 courseDate.append("Day: Not available")
@@ -130,7 +130,11 @@ extension CourseDetailController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath)
+        
+        // allows the text to wrap around to the next line rather than trailing dots
         cell.textLabel?.numberOfLines = 0
+        
+        // have a total array, with subarrays to separate for sections
         cell.textLabel?.text = total[indexPath.section][indexPath.row]
         return cell
     }

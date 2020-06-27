@@ -59,7 +59,6 @@ class CourseViewController: UIViewController, UISearchBarDelegate {
             
             guard let json = result else { return }
             self.courses = json.response
-            //print(json.response[0].meeting_sections[0])
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
