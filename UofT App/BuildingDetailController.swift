@@ -29,7 +29,6 @@ class BuildingDetailController: UIViewController, UITableViewDelegate {
         detail.append("Street: " + building.address.street)
         detail.append("Campus: " + building.address.city)
     }
-
 }
 
 extension BuildingDetailController: UITableViewDataSource {
