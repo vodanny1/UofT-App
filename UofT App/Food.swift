@@ -35,6 +35,6 @@ struct Hour: Codable {
 
 struct Operation: Codable {
     let closed: Bool?
-    let open: Int? = 0
-    let close: Int? = 0
+    let open: Int?
+    let close: Int?
 }

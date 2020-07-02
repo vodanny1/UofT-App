@@ -8,10 +8,12 @@
 
 import UIKit
 
-class FoodDetailViewController: UIViewController, UITableViewDelegate {
+class FoodDetailViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var food: FoodResult!
     var detail = [String]()
+    var total = [[String]]()
+    var hours = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,73 @@ class FoodDetailViewController: UIViewController, UITableViewDelegate {
         detail.append("Description: " + food.description)
         detail.append("Address: " + food.address)
         detail.append("Campus: " + food.campus)
+        
+        total.append(detail)
+        
+        // Sunday
+        
+        let week = [food.hours.sunday, food.hours.monday, food.hours.tuesday, food.hours.wednesday, food.hours.thursday, food.hours.friday, food.hours.saturday]
+        
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var dayCounter = 0
+        
+        for day in week {
+            if day.closed == true {
+                hours.append("""
+                \(days[dayCounter]): CLOSED
+                """)
+            } else {
+                
+                var open = 0
+                var close = 0
+                
+                if day.open != nil {
+                    open = day.open! / 3600
+                }
+                
+                if day.close != nil {
+                    close = day.close! / 3600
+                }
+                
+                if open == 0 && close == 0 {
+                    hours.append("""
+                    \(days[dayCounter]): OPEN
+                    Unavailable hours. Contact for more information.
+                    """)
+                } else {
+                    hours.append("""
+                    \(days[dayCounter]): OPEN
+                    Open: \(open):00
+                    Close: \(close):00
+                    """)
+                }
+                
+            }
+            
+            dayCounter += 1
+        }
+        
+        total.append(hours)
+    }
+}
+
+extension FoodDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Information"
+        } else {
+            return "Hours of Operation"
+        }
     }
 }
 
 extension FoodDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return detail.count
+        return total[section].count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return total.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,7 +103,8 @@ extension FoodDetailViewController: UITableViewDataSource {
         
         cell.textLabel?.numberOfLines = 0
         
-        cell.textLabel?.text = detail[indexPath.row]
+        //cell.textLabel?.text = detail[indexPath.row]
+        cell.textLabel?.text = total[indexPath.section][indexPath.row]
         return cell
     }
 }
