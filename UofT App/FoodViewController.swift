@@ -33,7 +33,6 @@ class FoodViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.contentInsetAdjustmentBehavior = .never
-        
     }
     
     func getData(from url: String) {
@@ -55,7 +54,6 @@ class FoodViewController: UIViewController {
             var toronto = [FoodResult]()
             var mississauga = [FoodResult]()
             var scarborough = [FoodResult]()
-            
             
             for food in self.foods {
                 if food.campus == "St. George" {

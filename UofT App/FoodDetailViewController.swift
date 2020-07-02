@@ -32,8 +32,6 @@ class FoodDetailViewController: UIViewController {
         
         total.append(detail)
         
-        // Sunday
-        
         let week = [food.hours.sunday, food.hours.monday, food.hours.tuesday, food.hours.wednesday, food.hours.thursday, food.hours.friday, food.hours.saturday]
         
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -69,12 +67,9 @@ class FoodDetailViewController: UIViewController {
                     Close: \(close):00
                     """)
                 }
-                
             }
-            
             dayCounter += 1
         }
-        
         total.append(hours)
     }
 }
@@ -102,8 +97,6 @@ extension FoodDetailViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "food", for: indexPath)
         
         cell.textLabel?.numberOfLines = 0
-        
-        //cell.textLabel?.text = detail[indexPath.row]
         cell.textLabel?.text = total[indexPath.section][indexPath.row]
         return cell
     }
