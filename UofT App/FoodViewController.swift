@@ -92,7 +92,7 @@ extension FoodViewController: UISearchResultsUpdating {
 extension FoodViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "FoodDetail") as? FoodDetailViewController{
-            vc.food = foods[indexPath.row]
+            vc.food = total[indexPath.section][indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
     }
