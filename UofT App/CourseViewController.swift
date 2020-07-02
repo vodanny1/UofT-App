@@ -11,6 +11,7 @@ import UIKit
 class CourseViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var courses = [CourseResult]()
+    var total = [[CourseResult]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,26 @@ class CourseViewController: UIViewController {
             
             guard let json = result else { return }
             self.courses = json.response
+            
+            var toronto = [CourseResult]()
+            var mississauga = [CourseResult]()
+            var scarborough = [CourseResult]()
+            
+            for course in self.courses {
+                if course.campus == "St. George" {
+                    toronto.append(course)
+                } else if course.campus == "Mississauga" {
+                    mississauga.append(course)
+                } else if course.campus == "Scarborough" {
+                    scarborough.append(course)
+                }
+            }
+            
+            self.total.removeAll()
+            self.total.append(toronto)
+            self.total.append(mississauga)
+            self.total.append(scarborough)
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -73,16 +94,36 @@ extension CourseViewController: UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Toronto"
+        }
+        
+        if section == 1 {
+            return "Mississauga"
+        }
+        
+        if section == 2 {
+            return "Scarborough"
+        }
+        return ""
+    }
 }
 
 extension CourseViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courses.count
+        return total[section].count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return total.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = courses[indexPath.row].code + " | " + courses[indexPath.row].term + " | " + courses[indexPath.row].campus
+        cell.textLabel?.text = total[indexPath.section][indexPath.row].code + " | " + total[indexPath.section][indexPath.row].term
+        //cell.textLabel?.text = total[indexPath.section][indexPath.row].term +  " | " + total[indexPath.section][indexPath.row].code
         return cell
     }
 }
