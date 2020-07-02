@@ -12,4 +12,6 @@ University of Toronto app that shows courses, buildings, exam locations, textboo
 
 Built using Swift 5.2 with UIKit.
 
+### Screenshots
 
+![alt text](https://user-images.githubusercontent.com/43733358/86413507-63447f00-bc8f-11ea-8800-afff0d59d962.png?raw=true)
