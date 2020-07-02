@@ -69,25 +69,37 @@ class CourseDetailController: UIViewController {
                     courseDate.append("Day: Not available")
                 }
                 
-                let start = course.meeting_sections[index].times[0].start! / 3600
+                var start = course.meeting_sections[index].times[0].start! / 3600
                 if start == 0 {
                     courseDate.append("Start: Not Available")
                 } else {
-                    courseDate.append("Start: " + String(start) + ":00")
+                    if start > 12 {
+                        start -= 12
+                        courseDate.append("Start: " + String(start) + ":00 PM")
+                    } else {
+                        courseDate.append("Start: " + String(start) + ":00 AM")
+                    }
+                    
                 }
                 
-                let end = course.meeting_sections[index].times[0].end! / 3600
+                var end = course.meeting_sections[index].times[0].end! / 3600
                 if end == 0 {
                     courseDate.append("End: Not Available")
                 } else {
-                    courseDate.append("End: " + String(end) + ":00")
+                    if end > 12 {
+                        end -= 12
+                        courseDate.append("End: " + String(end) + ":00 PM")
+                    } else {
+                        courseDate.append("End: " + String(end) + ":00 AM")
+                    }
+                    
                 }
                 
                 let duration = course.meeting_sections[index].times[0].duration! / 3600
                 if duration == 0 {
                     courseDate.append("Duration: Not Available")
                 } else {
-                    courseDate.append("Duration: " + String(duration) + ":00")
+                    courseDate.append("Duration: " + String(duration) + ":00 hour")
                 }
                 
                 if (course.meeting_sections[index].times[0].location != nil){

@@ -61,11 +61,29 @@ class FoodDetailViewController: UIViewController {
                     Unavailable hours. Contact for more information.
                     """)
                 } else {
-                    hours.append("""
-                    \(days[dayCounter]): OPEN
-                    Open: \(open):00
-                    Close: \(close):00
-                    """)
+                    
+                    if open < 12 && close > 12 {
+                        close -= 12
+                        hours.append("""
+                        \(days[dayCounter]): OPEN
+                        Open: \(open):00 AM
+                        Close: \(close):00 PM
+                        """)
+                    } else if open > 12 && close < 12 {
+                        open -= 12
+                        hours.append("""
+                        \(days[dayCounter]): OPEN
+                        Open: \(open):00 PM
+                        Close: \(close):00 AM
+                        """)
+                    } else {
+                        hours.append("""
+                        \(days[dayCounter]): OPEN
+                        Open: \(open):00
+                        Close: \(close):00
+                        """)
+                    }
+                    
                 }
             }
             dayCounter += 1
