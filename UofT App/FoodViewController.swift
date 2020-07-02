@@ -93,7 +93,10 @@ extension FoodViewController: UISearchResultsUpdating {
 
 extension FoodViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //select new vc
+        if let vc = storyboard?.instantiateViewController(identifier: "FoodDetail") as? FoodDetailViewController{
+            vc.food = foods[indexPath.row]
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

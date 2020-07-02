@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		995C71E324A6BACD00B445A3 /* CourseDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C71E224A6BACD00B445A3 /* CourseDetailController.swift */; };
 		995C71E524A6C81800B445A3 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995C71E424A6C81800B445A3 /* BuildingsViewController.swift */; };
+		99713B0624AE823200C8395C /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99713B0524AE823200C8395C /* FoodDetailViewController.swift */; };
 		9994076C24A7B4E5009D0B6B /* Buildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994076B24A7B4E5009D0B6B /* Buildings.swift */; };
 		9994076E24A7B9DF009D0B6B /* BuildingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994076D24A7B9DF009D0B6B /* BuildingDetailController.swift */; };
 		9994077024A7C738009D0B6B /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994076F24A7C738009D0B6B /* FoodViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		995C71E224A6BACD00B445A3 /* CourseDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailController.swift; sourceTree = "<group>"; };
 		995C71E424A6C81800B445A3 /* BuildingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsViewController.swift; sourceTree = "<group>"; };
+		99713B0524AE823200C8395C /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		9994076B24A7B4E5009D0B6B /* Buildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildings.swift; sourceTree = "<group>"; };
 		9994076D24A7B9DF009D0B6B /* BuildingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailController.swift; sourceTree = "<group>"; };
 		9994076F24A7C738009D0B6B /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				995C71E424A6C81800B445A3 /* BuildingsViewController.swift */,
 				99FBA3B724A68A1A005E0570 /* Main.storyboard */,
 				9994076F24A7C738009D0B6B /* FoodViewController.swift */,
+				99713B0524AE823200C8395C /* FoodDetailViewController.swift */,
 				9994077124A7C743009D0B6B /* Food.swift */,
 				99FBA3BA24A68A1B005E0570 /* Assets.xcassets */,
 				99FBA3BC24A68A1B005E0570 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			files = (
 				995C71E324A6BACD00B445A3 /* CourseDetailController.swift in Sources */,
 				99FBA3C624A691B0005E0570 /* Course.swift in Sources */,
+				99713B0624AE823200C8395C /* FoodDetailViewController.swift in Sources */,
 				9994076C24A7B4E5009D0B6B /* Buildings.swift in Sources */,
 				995C71E524A6C81800B445A3 /* BuildingsViewController.swift in Sources */,
 				9994077024A7C738009D0B6B /* FoodViewController.swift in Sources */,

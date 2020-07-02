@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUH-Ec-jYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.01449275362319" y="604.6875"/>
+            <point key="canvasLocation" x="-3203" y="598"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="eB5-xm-bMl">
@@ -106,7 +106,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcJ-7g-GZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3557.971014492754" y="-238.39285714285714"/>
+            <point key="canvasLocation" x="1916" y="-709"/>
+        </scene>
+        <!--Food Detail View Controller-->
+        <scene sceneID="Med-O2-u7X">
+            <objects>
+                <viewController storyboardIdentifier="FoodDetail" id="MER-zc-5yy" customClass="FoodDetailViewController" customModule="UofT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="48w-ez-OeM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VM0-PO-vRB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="food" id="Epz-uf-sMD">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Epz-uf-sMD" id="avH-dQ-I2S">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VM0-PO-vRB" firstAttribute="centerX" secondItem="48w-ez-OeM" secondAttribute="centerX" id="2Ua-u3-HI5"/>
+                            <constraint firstItem="VM0-PO-vRB" firstAttribute="leading" secondItem="qF8-Tv-5z5" secondAttribute="leading" id="GnP-EG-z5G"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VM0-PO-vRB" secondAttribute="bottom" constant="-34" id="l2o-Kx-Qmb"/>
+                            <constraint firstItem="VM0-PO-vRB" firstAttribute="top" secondItem="qF8-Tv-5z5" secondAttribute="top" id="nhp-04-J6a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qF8-Tv-5z5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R9c-AX-1R5"/>
+                    <connections>
+                        <outlet property="tableView" destination="VM0-PO-vRB" id="ZTv-iz-JIw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwT-4t-kHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4007" y="-709"/>
         </scene>
         <!--Course Detail Controller-->
         <scene sceneID="QpI-hY-dlT">
@@ -147,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNC-SP-qnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2382.608695652174" y="604.6875"/>
+            <point key="canvasLocation" x="-649" y="598"/>
         </scene>
         <!--Buildings View Controller-->
         <scene sceneID="Sfs-kS-OGY">
@@ -188,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs6-qJ-WU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4639.130434782609" y="608.70535714285711"/>
+            <point key="canvasLocation" x="1917" y="609"/>
         </scene>
         <!--Building Detail Controller-->
         <scene sceneID="0pd-fU-3In">
@@ -229,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3x6-Fh-BjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6507.2463768115949" y="597.99107142857144"/>
+            <point key="canvasLocation" x="3786" y="598"/>
         </scene>
         <!--Courses-->
         <scene sceneID="njG-lb-U9g">
@@ -248,7 +289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCc-Gb-T1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1081.1594202898552" y="605.35714285714278"/>
+            <point key="canvasLocation" x="-4113" y="598"/>
         </scene>
         <!--Item-->
         <scene sceneID="xgv-j0-phP">
@@ -267,7 +308,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLi-9C-72j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521.7391304347827" y="604.6875"/>
+            <point key="canvasLocation" x="-1510" y="598"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="85E-nL-ygh">
@@ -285,7 +326,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TyN-AS-2lD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="611.59420289855075" y="604.6875"/>
+            <point key="canvasLocation" x="-2420" y="598"/>
         </scene>
         <!--Buildings-->
         <scene sceneID="FqY-si-SU8">
@@ -304,7 +345,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M79-q8-5o3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3728.985507246377" y="608.70535714285711"/>
+            <point key="canvasLocation" x="1007" y="609"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ywj-fb-vv5">
@@ -322,7 +363,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDj-Wy-Lsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5597.1014492753629" y="597.99107142857144"/>
+            <point key="canvasLocation" x="2875" y="598"/>
         </scene>
         <!--Foods-->
         <scene sceneID="Huu-an-nrL">
@@ -341,12 +382,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVF-bb-8fg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647.826086956522" y="-238.39285714285714"/>
+            <point key="canvasLocation" x="1006" y="-709"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kzf-OD-P3p">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kyn-4V-ijf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nZo-LE-Wk8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MER-zc-5yy" kind="relationship" relationship="rootViewController" id="pnc-WQ-Ofw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NmW-HA-tGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3097" y="-709"/>
         </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="101"/>
-        <image name="food" width="50" height="50"/>
+        <image name="food" width="30" height="30"/>
         <image name="house" catalog="system" width="128" height="110"/>
     </resources>
 </document>
