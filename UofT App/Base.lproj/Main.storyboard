@@ -235,7 +235,7 @@
         <scene sceneID="njG-lb-U9g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vEG-oJ-iLU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Courses" id="FZd-LQ-7G5"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="book" catalog="system" id="FZd-LQ-7G5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EYa-Ce-FRE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -291,7 +291,7 @@
         <scene sceneID="FqY-si-SU8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DnF-0X-vKc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buildings" id="QDS-ph-uBI"/>
+                    <tabBarItem key="tabBarItem" title="Buildings" image="house" catalog="system" id="QDS-ph-uBI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IkI-9N-t2A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -328,7 +328,7 @@
         <scene sceneID="Huu-an-nrL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QEJ-je-3a6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Foods" id="4FR-ip-lUA"/>
+                    <tabBarItem key="tabBarItem" title="Foods" image="food" id="4FR-ip-lUA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gd6-CP-jsA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -344,4 +344,9 @@
             <point key="canvasLocation" x="2647.826086956522" y="-238.39285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="101"/>
+        <image name="food" width="50" height="50"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+    </resources>
 </document>
