@@ -82,7 +82,7 @@ extension FoodViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         
-        if searchBar.text!.count > 0 {
+        if searchBar.text!.count > 1 {
             let url = "https://nikel.ml/api/food?tags=" + searchBar.text!
             getData(from: url)
         }

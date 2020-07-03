@@ -60,7 +60,7 @@ extension BuildingsViewController: UISearchResultsUpdating {
         let searchBar = searchController.searchBar
         
         if searchBar.text!.count > 0 {
-            let url = "https://nikel.ml/api/buildings?limit=1&code==" + searchBar.text!.uppercased()
+            let url = "https://nikel.ml/api/buildings?code==" + searchBar.text!.uppercased()
             getData(from: url)
         }
     }

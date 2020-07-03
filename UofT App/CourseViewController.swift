@@ -80,7 +80,7 @@ extension CourseViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         
-        if searchBar.text!.count > 0 {
+        if searchBar.text!.count > 1 {
             let url = "https://nikel.ml/api/courses?id=" + searchBar.text! //+ "&limit=1"
             getData(from: url)
         }
