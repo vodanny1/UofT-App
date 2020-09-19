@@ -73,8 +73,10 @@ class CourseDetailController: UIViewController {
                 if start == 0 {
                     courseDate.append("Start: Not Available")
                 } else {
-                    if start > 12 {
-                        start -= 12
+                    if start >= 12 {
+                        if start > 12 {
+                            start -= 12
+                        }
                         courseDate.append("Start: " + String(start) + ":00 PM")
                     } else {
                         courseDate.append("Start: " + String(start) + ":00 AM")
@@ -86,8 +88,10 @@ class CourseDetailController: UIViewController {
                 if end == 0 {
                     courseDate.append("End: Not Available")
                 } else {
-                    if end > 12 {
-                        end -= 12
+                    if end >= 12 {
+                        if end > 12 {
+                            end -= 12
+                        }
                         courseDate.append("End: " + String(end) + ":00 PM")
                     } else {
                         courseDate.append("End: " + String(end) + ":00 AM")
