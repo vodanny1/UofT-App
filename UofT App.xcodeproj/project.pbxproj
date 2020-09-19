@@ -27,6 +27,7 @@
 		995C71E224A6BACD00B445A3 /* CourseDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailController.swift; sourceTree = "<group>"; };
 		995C71E424A6C81800B445A3 /* BuildingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsViewController.swift; sourceTree = "<group>"; };
 		99713B0524AE823200C8395C /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		9989EA1824B7D8510006EFAF /* UofT App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UofT App.entitlements"; sourceTree = "<group>"; };
 		9994076B24A7B4E5009D0B6B /* Buildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildings.swift; sourceTree = "<group>"; };
 		9994076D24A7B9DF009D0B6B /* BuildingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailController.swift; sourceTree = "<group>"; };
 		9994076F24A7C738009D0B6B /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		99FBA3B024A68A1A005E0570 /* UofT App */ = {
 			isa = PBXGroup;
 			children = (
+				9989EA1824B7D8510006EFAF /* UofT App.entitlements */,
 				99FBA3B124A68A1A005E0570 /* AppDelegate.swift */,
 				99FBA3B324A68A1A005E0570 /* SceneDelegate.swift */,
 				99FBA3C524A691B0005E0570 /* Course.swift */,
@@ -316,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UofT App/UofT App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8V5346TM2U;
 				INFOPLIST_FILE = "UofT App/Info.plist";
@@ -326,6 +329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.vo.danny.UofT-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UofT App/UofT App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8V5346TM2U;
 				INFOPLIST_FILE = "UofT App/Info.plist";
@@ -345,6 +350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.vo.danny.UofT-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
