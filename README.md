@@ -1,4 +1,8 @@
-# UofT Information App
+# University of Toronto Information App 1.0
+
+### Note
+
+There is a 2.0 version on my repository that offers the same feautures as 1.0 except it was built without using Storyboards whereas this one used it.
 
 ### API
 
